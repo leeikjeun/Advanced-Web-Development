@@ -2,26 +2,18 @@ var wrap = document.getElementById('wrap');
 var fleg = false;
 
 for(var i = 0; i < 16; i++){
-  if(i % 4 == 0){
+  if(i % 4 == 0)
     fleg = !fleg;
-  }
 
   if(fleg){
-    if(i % 2 == 0){
-      wrap.innerHTML += "<div class='black'></div>";
-    }else{
-      wrap.innerHTML += "<div class='white'></div>";
-    }
+    wrap.innerHTML += "<div class='black'></div>";
   }else{
-    if(i % 2 == 0){
-      wrap.innerHTML += "<div class='white'></div>";
-
-    }else{
-      wrap.innerHTML += "<div class='black'></div>";
-    }
+    wrap.innerHTML += "<div class='white'></div>";
   }
-
+  
+  fleg = !fleg;
 }
+
 var before;
 
 wrap.addEventListener('click',function(e){
