@@ -22,7 +22,7 @@ function makeImg(start, end){
 
 makeImg(first,end);
 
-leftRightEvent.children[0].addEventListener('click',function(){
+leftRightEvent.children[0].addEventListener('click',function(e){
 if (first == 0) {
  alert("첫 페이지")
  return;
