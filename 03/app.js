@@ -48,18 +48,20 @@
 //이 밑에 이벤트는 dom 요소가 로딩이 다 되면 발생하는 이벤트이다.
 document.addEventListener("DOMContentLoaded", function(event) {
 
-var divs = document.querySelectorAll('#wrap div');
-
-function changBg(e){
-  console.log('changBg');
-
-  console.log(e.currentTarget);
-  console.log(e.target);
-  e.currentTarget.style.backgroundColor = "blue";
-}
-
-for(var i = 0; i < divs.length; i++){
-  divs[i].addEventListener('click',changBg);
-}
-
+// var divs = document.querySelectorAll('#wrap div');
+//
+//
+//
+// function changBg(e){
+//   console.log('changBg');
+//
+//   console.log(e.currentTarget);
+//   console.log(e.target);
+//   e.currentTarget.style.backgroundColor = "blue";
+// }
+//
+// for(var i = 0; i < divs.length; i++){
+//   divs[i].addEventListener('click',changBg);
+// }
+  // alert("run");
 });
