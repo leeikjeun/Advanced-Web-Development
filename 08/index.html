@@ -6,13 +6,59 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <style media="screen">
+    ul{
+
+    }
+    li{
+      transition: all 3s ease-in;
+      height: 0px;
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
   <div class="test" id="box">
       <h1>JQuery</h1>
   </div>
-
+  <h1 class="ttt">ttt</h1>
+  <ul>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+  </ul>
 
   <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript">
+  var labInfo = document.querySelector('.ttt');
+
+var labInfoSubItems = document.querySelectorAll('li');
+
+labInfo.addEventListener('mouseover',function(e){
+
+  for(var i = 0; i < labInfoSubItems.length; i++){
+    labInfoSubItems[i].style.height = "auto"
+  }
+
+    labInfo.addEventListener('mouseout',showOutItems);
+},false);
+
+
+function showOutItems(e){
+  for(var i = 0; i < labInfoSubItems.length; i++){
+    labInfoSubItems[i].style.height = "0px"
+  }
+}
+
+
+
+  </script>
 </body>
 </html>
